@@ -474,9 +474,9 @@ CHECKSUM = {
 
 FEATURES = {
   # Use Cluster for Gear Selection, rather than Transmission
-  "use_cluster_gears": {CAR.NEXO},
+  "use_cluster_gears": {},
   # Use TCU Message for Gear Selection
-  "use_tcu_gears": {CAR.K5, CAR.SONATA19, CAR.VELOSTER, CAR.SONATA_LF_TURBO},
+  "use_tcu_gears": {},
   # Use E_GEAR Message for Gear Selection
   "use_elect_gears": {CAR.NEXO},
   # Use E_EMS11 Message for Gas and Brake for Hybrid/ELectric
@@ -488,7 +488,7 @@ FEATURES = {
   # these cars use the FCA11 message for the AEB and FCW signals, all others use SCC12
   "use_fca": {CAR.NEXO},
 
-  "use_blinker_flash": {CAR.SONATA_LF_TURBO},
+  "use_blinker_flash": {},
 
   "use_ldws": False,
 }
