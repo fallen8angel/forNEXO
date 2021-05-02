@@ -37,8 +37,9 @@ class CarState(CarStateBase):
     self.cruiseState_enabled = False
     self.cruiseState_speed = 0
 
-    self.use_cluster_speed = Params().get_bool('UseClusterSpeed')
     self.gear_shifter = GearShifter.drive # Gear_init for Nexo  ?? unknown 21.02.23.LSW
+    
+    self.use_cluster_speed = Params().get_bool('UseClusterSpeed')
     
   def update(self, cp, cp2, cp_cam):
     cp_mdps = cp2 if self.mdps_bus else cp
@@ -155,7 +156,8 @@ class CarState(CarStateBase):
     elif self.CP.carFingerprint in FEATURES["use_elect_gears"]:#  Nexo elect_Gear only !!!
       gear = cp.vl["ELECT_GEAR"]["Elect_Gear_Shifter"]
       gear_disp = cp.vl["ELECT_GEAR"]
-      
+      #print(gear_disp)
+      print(gear)
       gear_shifter = GearShifter.unknown
 
       if gear == 1546:  # Thank you for Neokii 
