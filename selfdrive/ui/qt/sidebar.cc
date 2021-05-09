@@ -73,11 +73,11 @@ void Sidebar::update(const UIState &s) {
   }
   temp_val = (int)s.scene.deviceState.getAmbientTempC();
 
-  panda_str = "VEHICLE\nONLINE";
+  panda_str = "네트워크\n연결됨";
   panda_status = good_color;
   if (s.scene.pandaType == cereal::PandaState::PandaType::UNKNOWN) {
     panda_status = danger_color;
-    panda_str = "NO\nPANDA";
+    panda_str = "판다\n연결안됨";
   } else if (Hardware::TICI() && s.scene.started) {
     panda_str = QString("SAT CNT\n%1").arg(s.scene.satelliteCount);
     panda_status = s.scene.gpsOK ? good_color : warning_color;
